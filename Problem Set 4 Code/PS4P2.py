@@ -1,0 +1,7 @@
+PPS = float(input("Enter Price Per Share: "))
+CSP = float(input("Enter Stock Price: "))
+QoS = float(input("Enter stock quantity: "))
+Change = ((CSP - PPS) * QoS)
+print("The stock value has changed by: " , Change)
+if(Change > 0): print("Congrats! you are in the green!")
+if(Change < 0): print("You're in the red, and losing money!")
