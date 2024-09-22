@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="PS5P5"/>
+        <attribute name="authors" value="inima"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-19 11:06:45 AM"/>
+        <attribute name="created" value="aW5pbWE7TklNQUhQOzIwMjQtMDktMTk7MTA6Mzc6MDQgQU07MjI0Mg=="/>
+        <attribute name="edited" value="aW5pbWE7TklNQUhQOzIwMjQtMDktMTk7MTE6MDY6NDUgQU07MTsyMzUy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Surrname" type="String" array="False" size=""/>
+            <output expression="&quot;Enter Surrname.&quot;" newline="True"/>
+            <input variable="Surrname"/>
+            <declare name="NumOfDependents" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter number of dependents in household.&quot;" newline="True"/>
+            <input variable="NumOfDependents"/>
+            <declare name="GrossIncome, AGI, TaxRate, IncomeTax" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter gross income.&quot;" newline="True"/>
+            <input variable="GrossIncome"/>
+            <assign variable="AGI" expression="GrossIncome - NumOfDependents * 12000"/>
+            <if expression="AGI &gt; 50000">
+                <then>
+                    <assign variable="TaxRate" expression="0.20"/>
+                </then>
+                <else>
+                    <assign variable="TaxRate" expression="0.10"/>
+                </else>
+            </if>
+            <assign variable="IncomeTax" expression="AGI * TaxRate"/>
+            <if expression="IncomeTax &lt; 0">
+                <then>
+                    <assign variable="IncomeTax" expression="100"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="Surrname &amp; &quot;; Has a gross income of $&quot; &amp; GrossIncome &amp; &quot;, &quot; &amp; NumOfDependents &amp; &quot; dependents, and an AGI of; $&quot; &amp; AGI &amp; &quot;. This makes their income tax: $&quot; &amp; IncomeTax" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

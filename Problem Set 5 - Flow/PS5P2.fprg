@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="PS5P2"/>
+        <attribute name="authors" value="inima"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-17 11:25:53 AM"/>
+        <attribute name="created" value="aW5pbWE7TklNQUhQOzIwMjQtMDktMTc7MTE6MDI6MDYgQU07MjIzNQ=="/>
+        <attribute name="edited" value="aW5pbWE7TklNQUhQOzIwMjQtMDktMTc7MTE6MjU6NTMgQU07MjsyMzUx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Item" type="String" array="False" size=""/>
+            <output expression="&quot;Would you like to purchase item A or B?&quot;" newline="True"/>
+            <input variable="Item"/>
+            <output expression="&quot;Enter quantity of the item you'd like to purchase.&quot;" newline="True"/>
+            <declare name="Quantity" type="Integer" array="False" size=""/>
+            <input variable="Quantity"/>
+            <declare name="UnitPrice, ExtendedPrice" type="Real" array="False" size=""/>
+            <if expression="Item = &quot;A&quot;">
+                <then>
+                    <assign variable="UnitPrice" expression="10"/>
+                </then>
+                <else>
+                    <assign variable="UnitPrice" expression="20"/>
+                </else>
+            </if>
+            <assign variable="ExtendedPrice" expression="Quantity * UnitPrice"/>
+            <output expression="&quot;You are purchasing &quot; &amp; Quantity &amp; &quot; of item &quot; &amp; Item &amp; &quot;. With a price per unit of; $&quot; &amp; UnitPrice &amp; &quot;. Your total cost will be: $&quot; &amp; ExtendedPrice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

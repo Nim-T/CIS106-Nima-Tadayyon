@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="PS5P3"/>
+        <attribute name="authors" value="inima"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-19 09:57:24 AM"/>
+        <attribute name="created" value="aW5pbWE7TklNQUhQOzIwMjQtMDktMTk7MDk6NDc6MjEgQU07MjI1MA=="/>
+        <attribute name="edited" value="aW5pbWE7TklNQUhQOzIwMjQtMDktMTk7MDk6NTc6MjQgQU07MTsyMzYy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="NumOfBooks, Shipping" type="Integer" array="False" size=""/>
+            <declare name="CostPerBook, OrderTotal, OrderCost" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter book cost:&quot;" newline="True"/>
+            <input variable="CostPerBook"/>
+            <output expression="&quot;Please enter how many copies you'd like to purchase:&quot;" newline="True"/>
+            <input variable="NumOfBooks"/>
+            <assign variable="OrderCost" expression="NumOfBooks * CostPerBook"/>
+            <if expression="OrderCost &gt; 50.01">
+                <then>
+                    <assign variable="Shipping" expression="0"/>
+                </then>
+                <else>
+                    <assign variable="Shipping" expression="25"/>
+                </else>
+            </if>
+            <assign variable="OrderTotal" expression="OrderCost + Shipping"/>
+            <output expression="&quot;Your total purchase is: $&quot; &amp; OrderCost &amp; &quot; + $&quot; &amp; Shipping &amp; &quot; shipping costs, totaling at: $&quot; &amp; OrderTotal" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

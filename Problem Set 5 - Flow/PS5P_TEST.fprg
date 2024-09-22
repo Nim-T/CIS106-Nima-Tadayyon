@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="PS5P_TEST"/>
+        <attribute name="authors" value="inima"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-17 11:20:29 AM"/>
+        <attribute name="created" value="aW5pbWE7TklNQUhQOzIwMjQtMDktMTc7MTE6MTA6NDMgQU07MjIzNQ=="/>
+        <attribute name="edited" value="aW5pbWE7TklNQUhQOzIwMjQtMDktMTc7MTE6MjA6MjkgQU07MTsyMzQ4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="MealCost, Tip, ActualCost" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter total meal cost:&quot;" newline="True"/>
+            <input variable="MealCost"/>
+            <if expression="MealCost &gt; 25">
+                <then>
+                    <assign variable="Tip" expression="MealCost * 0.2"/>
+                </then>
+                <else>
+                    <assign variable="Tip" expression="3"/>
+                </else>
+            </if>
+            <assign variable="ActualCost" expression="Mealcost + Tip"/>
+            <output expression="&quot;With a meal cost of $&quot; &amp; MealCost &amp; &quot; and a tip of $&quot; &amp; Tip &amp; &quot;, Your total + tip will be: $&quot; &amp; ActualCost" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

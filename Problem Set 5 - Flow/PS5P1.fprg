@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="PS5P1"/>
+        <attribute name="authors" value="inima"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-17 11:02:02 AM"/>
+        <attribute name="created" value="aW5pbWE7TklNQUhQOzIwMjQtMDktMTc7MTA6MzU6MDggQU07MjI0Mg=="/>
+        <attribute name="edited" value="aW5pbWE7TklNQUhQOzIwMjQtMDktMTc7MTE6MDI6MDIgQU07MTsyMzM5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Quantity" type="Integer" array="False" size=""/>
+            <declare name="UnitPrice, ExtendedPrice, Tax, ActualPrice" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter item quantity:&quot;" newline="True"/>
+            <input variable="Quantity"/>
+            <if expression="Quantity &gt; 999">
+                <then>
+                    <assign variable="UnitPrice" expression="3"/>
+                </then>
+                <else>
+                    <assign variable="UnitPrice" expression="5"/>
+                </else>
+            </if>
+            <assign variable="ExtendedPrice" expression="Quantity * UnitPrice"/>
+            <assign variable="Tax" expression="ExtendedPrice * 0.07"/>
+            <assign variable="ActualPrice" expression="ExtendedPrice + Tax"/>
+            <output expression="&quot;With a quantity of: &quot; &amp; Quantity &amp; &quot;, The price per unit is; $&quot; &amp; UnitPrice &amp; &quot;. Total before Tax: $&quot; &amp; ExtendedPrice &amp; &quot;, Tax: $&quot; &amp; Tax &amp; &quot;, Total: $&quot; &amp; ActualPrice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
