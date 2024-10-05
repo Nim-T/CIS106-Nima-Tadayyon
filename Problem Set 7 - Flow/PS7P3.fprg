@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="PS7P3 -Incomplete"/>
+        <attribute name="authors" value="inima"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-03 11:02:34 AM"/>
+        <attribute name="created" value="aW5pbWE7TklNQUhQOzIwMjQtMTAtMDM7MDk6MjM6NDkgQU07MjIzOQ=="/>
+        <attribute name="edited" value="aW5pbWE7TklNQUhQOzIwMjQtMTAtMDM7MTE6MDI6MzQgQU07MjsyMzMy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Run, Surname" type="String" array="False" size=""/>
+            <declare name="Exam1, Exam2, Avg, NumOfLoops" type="Real" array="False" size=""/>
+            <output expression="&quot;Run this program? (Y/N)&quot;" newline="True"/>
+            <input variable="Run"/>
+            <if expression="Run = &quot;Y&quot; or Run = &quot;y&quot;">
+                <then>
+                    <assign variable="NumOfLoops" expression="0"/>
+                    <while expression="Run = &quot;Y&quot; or Run = &quot;y&quot;">
+                        <output expression="&quot;Please enter student's surname:&quot;" newline="True"/>
+                        <input variable="Surname"/>
+                        <output expression="&quot;Enter student's score on first exam(Enter as decimal):&quot;" newline="True"/>
+                        <input variable="Exam1"/>
+                        <output expression="&quot;Enter student's score on second exam(Enter as decimal):&quot;" newline="True"/>
+                        <input variable="Exam2"/>
+                        <assign variable="Avg" expression="(Exam1 + Exam2) / 2"/>
+                        <output expression="Surname &amp; &quot;'s average Score is: &quot; &amp; Avg * 100 &amp; &quot;%&quot;" newline="True"/>
+                        <assign variable="NumOfLoops" expression="NumOfLoops + 1"/>
+                        <output expression="&quot;Run program again? (Y/N)&quot;" newline="True"/>
+                        <input variable="Run"/>
+                    </while>
+                    <output expression="&quot;Program stopped. Number of students who entered data: &quot; &amp; NumOfLoops" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Program stopped&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

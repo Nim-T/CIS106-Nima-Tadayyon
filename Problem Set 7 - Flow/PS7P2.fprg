@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="PS7P2"/>
+        <attribute name="authors" value="inima"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-01 11:26:16 AM"/>
+        <attribute name="created" value="aW5pbWE7TklNQUhQOzIwMjQtMTAtMDE7MTE6MjA6NDAgQU07MjIxOA=="/>
+        <attribute name="edited" value="aW5pbWE7TklNQUhQOzIwMjQtMTAtMDE7MTE6MjY6MTYgQU07MTsyMzM1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Start, Stop, Increment" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter a starting value:&quot;" newline="True"/>
+            <input variable="Start"/>
+            <output expression="&quot;Enter the stop value:&quot;" newline="True"/>
+            <input variable="Stop"/>
+            <output expression="&quot;Enter the incremental value:&quot;" newline="True"/>
+            <input variable="Increment"/>
+            <while expression="Start &lt; Stop">
+                <assign variable="Start" expression="Start + Increment"/>
+                <output expression="Start" newline="True"/>
+            </while>
+            <output expression="&quot;End&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

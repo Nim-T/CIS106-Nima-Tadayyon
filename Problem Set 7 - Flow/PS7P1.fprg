@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Problem Set 7 - Flow"/>
+        <attribute name="authors" value="inima"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-01 11:19:18 AM"/>
+        <attribute name="created" value="aW5pbWE7TklNQUhQOzIwMjQtMTAtMDE7MTA6NTE6NDUgQU07MjIyNg=="/>
+        <attribute name="edited" value="aW5pbWE7TklNQUhQOzIwMjQtMTAtMDE7MTE6MTk6MTggQU07MTsyMzM5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Num" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number: '1'.&quot;" newline="True"/>
+            <input variable="Num"/>
+            <while expression="Num &lt;= 23">
+                <assign variable="Num" expression="Num + 2"/>
+                <output expression="Num" newline="True"/>
+            </while>
+            <output expression="&quot;^ Odd numbers through 25&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
