@@ -1,0 +1,16 @@
+Marcus
+I
+8
+Bloom
+O
+12
+Smith
+O
+10
+Goodman
+O
+8
+Hull
+I
+15
+
